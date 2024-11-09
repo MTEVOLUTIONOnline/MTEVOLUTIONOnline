@@ -1,0 +1,28 @@
+/* Estilos do contêiner do spinner */
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Para ocupar a altura total da tela */
+    background-color: #f0f0f0; /* Cor de fundo opcional */
+}
+
+/* Estilos do spinner */
+.spinner {
+    width: 50px; /* Largura do spinner */
+    height: 50px; /* Altura do spinner */
+    border: 5px solid #3498db; /* Cor da borda do spinner */
+    border-top: 5px solid transparent; /* Cor da parte superior do spinner */
+    border-radius: 50%; /* Para fazer um círculo */
+    animation: spin 1s linear infinite; /* Animação do spinner */
+}
+
+/* Definição da animação */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg); /* Posição inicial */
+    }
+    100% {
+        transform: rotate(360deg); /* Posição final */
+    }
+}
