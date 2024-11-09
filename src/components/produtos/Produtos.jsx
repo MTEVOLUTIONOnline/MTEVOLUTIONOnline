@@ -35,12 +35,12 @@ const Produtos = () => {
               <a href={"/produto/"+produto.titulo}>
                 <div className="flexColStart r-card">
                   {produto.img || "nada"}
-                  <img src="https://storage.googleapis.com/a1aa/image/xr3epfiIfwdleTWb6YxJWUfFsiMfJw4HJTreqwzoJo0LhyK3JA.jpg" alt={produto.titulo} />
+                  <img src="https://storage.googleapis.com/a1aa/image/xr3epfiIfwdleTWb6YxJWUfFsiMfJw4HJTreqwzoJo0LhyK3JA.jpg"/>
                   <span className="secondaryText r-price">
                     <span style={{ color: 'orange' }}>$</span>
                   </span>
-                  <span className="primaryText">{produto.titulo}</span>
-                  <span className="secondaryText">{produto.descricao}</span>
+                  <span className="primaryText"></span>
+                  <span className="secondaryText"></span>
                 </div>
               </a>
             </SwiperSlide>
