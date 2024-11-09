@@ -10,14 +10,14 @@ const Produtos = () => {
   // Produtos definidos manualmente para exibição estática
   const produtos = [
     {
-      id: 1,
+      
       titulo: "Afria Inteligência Artificial",
       
       img: "https://storage.googleapis.com/a1aa/image/zQQQkCa1NV6OFBbk1OJSwldiEz37RORKbRqufpme0lBizAvTA.jpg"
       descricao: "Soluções de IA personalizadas para atender às necessidades da sua empresa.",
     },
     {
-      id: 2,
+     
       titulo: ""API de IA"",
       
       img: "https://storage.googleapis.com/a1aa/image/EBCzKbNffXlpS0tuismzgpNcMXFI7LTkpJAyUyflgEiHnBeOB.jpg"
