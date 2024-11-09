@@ -1,69 +1,56 @@
 // components/Produtos/Produtos.jsx
 
 import React from 'react';
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
-import 'swiper/css';
-import './Residencies.css';
-import { sliderSettings } from '../../utils/common';
 
 const Produtos = () => {
-  // Produtos definidos manualmente para exibição estática
+  // Produtos com link da imagem, título e descrição
   const produtos = [
     {
       id: 1,
-      titulo: "Produto 1",
-      descricao: "Descrição do Produto 1",
-      img: "https://storage.googleapis.com/a1aa/image/xr3epfiIfwdleTWb6YxJWUfFsiMfJw4HJTreqwzoJo0LhyK3JA.jpg"
+      titulo: "Afria Inteligência Artificial",
+      descricao: "Soluções de IA personalizadas para atender às necessidades da sua empresa.",
+      imagem: "https://storage.googleapis.com/a1aa/image/zQQQkCa1NV6OFBbk1OJSwldiEz37RORKbRqufpme0lBizAvTA.jpg",
+      contato: "https://wa.me/258845508884"
     },
     {
       id: 2,
-      titulo: "Produto 2",
-      descricao: "Descrição do Produto 2",
-      img: "https://storage.googleapis.com/a1aa/image/xr3epfiIfwdleTWb6YxJWUfFsiMfJw4HJTreqwzoJo0LhyK3JA.jpg"
+      titulo: "API IA",
+      descricao: "APIs de inteligência artificial para integrar em seus sistemas e aplicativos.",
+      imagem: "https://storage.googleapis.com/a1aa/image/EBCzKbNffXlpS0tuismzgpNcMXFI7LTkpJAyUyflgEiHnBeOB.jpg",
+      contato: "https://wa.me/258845508884"
     },
-    // Adicione mais produtos conforme necessário
+    {
+      id: 3,
+      titulo: "Bot Criator Telegram",
+      descricao: "Ferramenta para criar e gerenciar bots no Telegram de forma fácil e eficiente.",
+      imagem: "https://storage.googleapis.com/a1aa/image/2lvVM8i3Acp8Nx3VdVogcHKvMl20k2matPYF3i7xROK5Mw7E.jpg",
+      contato: "https://wa.me/258845508884"
+    }
   ];
 
   return (
-    <div id="residencies" className="r-wrapper">
-      <div className="paddings innerWidth r-container">
-        <div className="flexColStart r-head">
-          <span className="orangeText">Produtos</span>
-          <span className="primaryText">Melhores Produtos</span>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {produtos.map((produto) => (
+        <div key={produto.id} className="bg-white p-6 rounded-lg shadow-lg slide-up">
+          <img
+            src={produto.imagem}
+            alt={`Imagem de ${produto.titulo}`}
+            className="mb-4 rounded"
+            width="600"
+            height="400"
+          />
+          <h3 className="text-2xl font-bold mb-2">{produto.titulo}</h3>
+          <p>{produto.descricao}</p>
+          <a
+            href={produto.contato}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block mt-4"
+          >
+            Contactar no WhatsApp
+          </a>
         </div>
-        <Swiper {...sliderSettings}>
-          <SlideNextButton />
-          {/* slider Produtos */}
-          {produtos.map((produto) => (
-            <SwiperSlide key={produto.id}>
-              <a href={"/produto/"+produto.titulo}>
-                <div className="flexColStart r-card">
-                  <img src={produto.img} alt={produto.titulo} />
-                  <span className="secondaryText r-price">
-                    <span style={{ color: 'orange' }}>$</span>
-                  </span>
-                  <span className="primaryText">{produto.titulo}</span>
-                  <span className="secondaryText">{produto.descricao}</span>
-                </div>
-              </a>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-    </div>
-  );
-};
-
-const SlideNextButton = () => {
-  const swiper = useSwiper();
-  return (
-    <div className="flexCenter r-buttons">
-      <button onClick={() => swiper.slidePrev()} className="r-prevButton">
-        &lt;
-      </button>
-      <button onClick={() => swiper.slideNext()} className="r-nextButton">
-        &gt;
-      </button>
+      ))}
     </div>
   );
 };
