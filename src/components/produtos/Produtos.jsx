@@ -11,16 +11,26 @@ const Produtos = () => {
   const produtos = [
     {
       id: 1,
-      titulo: "Produto 1",
-      descricao: "Descrição do Produto 1",
-      img: "https://storage.googleapis.com/a1aa/image/xr3epfiIfwdleTWb6YxJWUfFsiMfJw4HJTreqwzoJo0LhyK3JA.jpg"
+      titulo: "Afria Inteligência Artificial",
+      
+      img: "https://storage.googleapis.com/a1aa/image/zQQQkCa1NV6OFBbk1OJSwldiEz37RORKbRqufpme0lBizAvTA.jpg"
+      descricao: "Soluções de IA personalizadas para atender às necessidades da sua empresa.",
     },
     {
       id: 2,
-      titulo: "Produto 2",
-      descricao: "Descrição do Produto 2",
-      img: "https://storage.googleapis.com/a1aa/image/xr3epfiIfwdleTWb6YxJWUfFsiMfJw4HJTreqwzoJo0LhyK3JA.jpg"
+      titulo: ""API de IA"",
+      
+      img: "https://storage.googleapis.com/a1aa/image/EBCzKbNffXlpS0tuismzgpNcMXFI7LTkpJAyUyflgEiHnBeOB.jpg"
+      descricao: "APIs de inteligência artificial para integrar em seus sistemas e aplicativos." ,
     },
+
+
+       titulo: "Bot Criator Telegram",
+      
+      imagem: "https://storage.googleapis.com/a1aa/image/2lvVM8i3Acp8Nx3VdVogcHKvMl20k2matPYF3i7xROK5Mw7E.jpg",
+      descricao: "Ferramenta para criar e gerenciar bots no Telegram de forma fácil e eficiente.",
+      
+    }
     // Adicione mais produtos conforme necessário
   ];
 
