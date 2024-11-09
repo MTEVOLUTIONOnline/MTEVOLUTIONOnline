@@ -1,24 +1,28 @@
 // components/Produtos/Produtos.jsx
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import 'swiper/css';
 import './Residencies.css';
 import { sliderSettings } from '../../utils/common';
-import { getProdutos } from '../../services/apiService'; // Importe a função do serviço
-import { URL_server } from '../../services/url';
 
 const Produtos = () => {
-  const [produtos, setProdutos] = useState([]);
-
-  useEffect(() => {
-    const fetchProdutos = async () => {
-      const data = await getProdutos();
-      setProdutos(data);
-    };
-
-    fetchProdutos();
-  }, []);
+  // Produtos definidos manualmente para exibição estática
+  const produtos = [
+    {
+      id: 1,
+      titulo: "Produto 1",
+      descricao: "Descrição do Produto 1",
+      img: "https://storage.googleapis.com/a1aa/image/xr3epfiIfwdleTWb6YxJWUfFsiMfJw4HJTreqwzoJo0LhyK3JA.jpg"
+    },
+    {
+      id: 2,
+      titulo: "Produto 2",
+      descricao: "Descrição do Produto 2",
+      img: "https://storage.googleapis.com/a1aa/image/xr3epfiIfwdleTWb6YxJWUfFsiMfJw4HJTreqwzoJo0LhyK3JA.jpg"
+    },
+    // Adicione mais produtos conforme necessário
+  ];
 
   return (
     <div id="residencies" className="r-wrapper">
@@ -29,18 +33,17 @@ const Produtos = () => {
         </div>
         <Swiper {...sliderSettings}>
           <SlideNextButton />
-          {/* slider Produtos*/}
-          ((produto) => (
-            <SwiperSlide>
-              <a href=>
+          {/* slider Produtos */}
+          {produtos.map((produto) => (
+            <SwiperSlide key={produto.id}>
+              <a href={"/produto/"+produto.titulo}>
                 <div className="flexColStart r-card">
-                  
-                  <img src="https://storage.googleapis.com/a1aa/image/xr3epfiIfwdleTWb6YxJWUfFsiMfJw4HJTreqwzoJo0LhyK3JA.jpg"/>
+                  <img src={produto.img} alt={produto.titulo} />
                   <span className="secondaryText r-price">
                     <span style={{ color: 'orange' }}>$</span>
                   </span>
-                  <span className="primaryText"></span>
-                  <span className="secondaryText"></span>
+                  <span className="primaryText">{produto.titulo}</span>
+                  <span className="secondaryText">{produto.descricao}</span>
                 </div>
               </a>
             </SwiperSlide>
