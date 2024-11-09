@@ -35,7 +35,7 @@ const Produtos = () => {
               <a href={"/produto/"+produto.titulo}>
                 <div className="flexColStart r-card">
                   {produto.img || "nada"}
-                  <img src={produto.img} alt={produto.titulo} />
+                  <img src="https://storage.googleapis.com/a1aa/image/xr3epfiIfwdleTWb6YxJWUfFsiMfJw4HJTreqwzoJo0LhyK3JA.jpg" alt={produto.titulo} />
                   <span className="secondaryText r-price">
                     <span style={{ color: 'orange' }}>$</span>
                   </span>
