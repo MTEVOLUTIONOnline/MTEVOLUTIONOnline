@@ -30,11 +30,11 @@ const Produtos = () => {
         <Swiper {...sliderSettings}>
           <SlideNextButton />
           {/* slider Produtos*/}
-          {produtos.map((produto) => (
-            <SwiperSlide key={produto.id}>
-              <a href={"/produto/"+produto.titulo}>
+          ((produto) => (
+            <SwiperSlide>
+              <a href=>
                 <div className="flexColStart r-card">
-                  {produto.img || "nada"}
+                  
                   <img src="https://storage.googleapis.com/a1aa/image/xr3epfiIfwdleTWb6YxJWUfFsiMfJw4HJTreqwzoJo0LhyK3JA.jpg"/>
                   <span className="secondaryText r-price">
                     <span style={{ color: 'orange' }}>$</span>
